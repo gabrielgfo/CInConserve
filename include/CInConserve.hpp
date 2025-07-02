@@ -31,7 +31,7 @@ public:
     float getWingspan() const;
     std::string getNaturalHabitat() const;
     bool getIsMigratory() const;
-    bool getendangeredStatus() const;
+    EndangeredStatus getendangeredStatus() const;
 
     void setName(const std::string& newName);
     void setPopularName(const std::string& newPopularName);
@@ -62,4 +62,21 @@ public:
     std::string getBirdType() const override;
 };
 
-class Falconiform
+class Falconiformes : public Bird {
+public:
+    Falconiformes(const std::string& name, const std::string& popularName, const std::string& scientificName, 
+                  int age, float wingspan, const std::string& naturalHabitat, bool isMigratory, EndangeredStatus endangeredStatus);
+    std::string getBirdType() const override;
+};
+class Galliformes : public Bird {
+public:
+    Galliformes(const std::string& name, const std::string& popularName, const std::string& scientificName, 
+                int age, float wingspan, const std::string& naturalHabitat, bool isMigratory, EndangeredStatus endangeredStatus);
+    std::string getBirdType() const override;
+};
+class Psittaciformes : public Bird {
+public:
+    Psittaciformes(const std::string& name, const std::string& popularName, const std::string& scientificName, 
+                   int age, float wingspan, const std::string& naturalHabitat, bool isMigratory, EndangeredStatus endangeredStatus);
+    std::string getBirdType() const override;
+};

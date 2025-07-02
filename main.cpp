@@ -1,4 +1,4 @@
-#include "CInConserve.hpp"
+#include "include/CInConserve.hpp"
 #include <memory>
 int main() {
     // Create a Bird object
@@ -14,6 +14,6 @@ int main() {
     // Display updated information
     std::cout << "\nUpdated Information:\n";
     eagle.displayInfo();
-    delete &eagle; // Clean up
+    
     return 0;
 }
