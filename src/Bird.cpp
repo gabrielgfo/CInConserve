@@ -1,4 +1,4 @@
-#include "include/CInConserve.hpp"
+#include "Bird.hpp"
 
 // Bird class implementations
 Bird::Bird(const std::string& name, const std::string& popularName, const std::string& scientificName, 
@@ -39,34 +39,3 @@ void Bird::displayInfo() const {
               ? "Vulnerable" : (endangeredStatus == 2) ? "Endangered" : "Critically Endangered")  << "\n";
 }
 Bird::~Bird() = default;
-
-// Derived class implementations
-Passeriformes::Passeriformes(const std::string& name, const std::string& popularName, const std::string& scientificName, 
-                             int age, float wingspan, const std::string& naturalHabitat, bool isMigratory, EndangeredStatus endangeredStatus)
-    : Bird(name, popularName, scientificName, age, wingspan, naturalHabitat, isMigratory, endangeredStatus) {}
-
-std::string Passeriformes::getBirdType() const { return "Passeriformes (Small songbirds)"; }
-
-Anseriformes::Anseriformes(const std::string& name, const std::string& popularName, const std::string& scientificName, 
-                           int age, float wingspan, const std::string& naturalHabitat, bool isMigratory, EndangeredStatus endangeredStatus)
-    : Bird(name, popularName, scientificName, age, wingspan, naturalHabitat, isMigratory, endangeredStatus) {}
-
-std::string Anseriformes::getBirdType() const { return "Anseriformes (Waterfowl)"; }
-
-Falconiformes::Falconiformes(const std::string& name, const std::string& popularName, const std::string& scientificName, 
-                             int age, float wingspan, const std::string& naturalHabitat, bool isMigratory, EndangeredStatus endangeredStatus)
-    : Bird(name, popularName, scientificName, age, wingspan, naturalHabitat, isMigratory, endangeredStatus) {}
-
-std::string Falconiformes::getBirdType() const { return "Falconiformes (Birds of Prey)"; }
-
-Galliformes::Galliformes(const std::string& name, const std::string& popularName, const std::string& scientificName, 
-                         int age, float wingspan, const std::string& naturalHabitat, bool isMigratory, EndangeredStatus endangeredStatus)
-    : Bird(name, popularName, scientificName, age, wingspan, naturalHabitat, isMigratory, endangeredStatus) {}
-
-std::string Galliformes::getBirdType() const { return "Galliformes (Landfowl))"; }
-
-Psittaciformes::Psittaciformes(const std::string& name, const std::string& popularName, const std::string& scientificName, 
-                               int age, float wingspan, const std::string& naturalHabitat, bool isMigratory, EndangeredStatus endangeredStatus)
-    : Bird(name, popularName, scientificName, age, wingspan, naturalHabitat, isMigratory, endangeredStatus) {}
-
-std::string Psittaciformes::getBirdType() const { return "Psittaciformes (Parrots)"; }
