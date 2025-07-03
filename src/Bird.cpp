@@ -1,4 +1,4 @@
-#include "Bird.hpp"
+#include "../include/Bird.hpp"
 
 // Bird class implementations
 Bird::Bird(const std::string& name, const std::string& popularName, const std::string& scientificName, 

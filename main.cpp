@@ -1,4 +1,10 @@
-#include "include/CInConserve.hpp"
+#include "include/Bird.hpp"
+#include "include/Passeriformes.hpp"
+#include "include/Anseriformes.hpp"
+#include "include/Falconiformes.hpp"
+#include "include/Galliformes.hpp"
+#include "include/Psittaciformes.hpp"
+#include <iostream>
 #include <memory>
 #include <vector>
 #include <limits>
@@ -9,7 +15,7 @@ private:
 
 public:
     void displayMenu() {
-        std::cout << "\n========== Bird Conservation Management System ==========\n";
+        std::cout << "\n========== CInConserve Management System ==========\n";
         std::cout << "1. Add a new bird\n";
         std::cout << "2. Display all birds\n";
         std::cout << "3. Edit a bird\n";
@@ -316,7 +322,7 @@ public:
     void run() {
         int choice;
         
-        std::cout << "Welcome to the Bird Conservation Management System!\n";
+        std::cout << "Welcome to the CInConserve Management System!\n";
         
         do {
             displayMenu();
@@ -344,7 +350,7 @@ public:
                     findByEndangeredStatus();
                     break;
                 case 6:
-                    std::cout << "\nThank you for using the Bird Conservation Management System!\n";
+                    std::cout << "\nThank you for using the CInConserve Management System!\n";
                     break;
             }
             

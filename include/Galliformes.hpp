@@ -1,5 +1,6 @@
 #ifndef GALLIFORMES_HPP
 #define GALLIFORMES_HPP
+#include "Bird.hpp"
 
 class Galliformes : public Bird {
 public:
