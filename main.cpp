@@ -57,7 +57,7 @@ public:
         while (!(std::cin >> choice) || choice < 0 || choice > 3) {
             std::cout << "Invalid input. Please enter a number between 0 and 3: ";
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear input buffer
         }
         std::cin.ignore(); // Clear the newline character
         return static_cast<EndangeredStatus>(choice);
@@ -112,7 +112,7 @@ public:
         int birdType = getBirdTypeChoice();
         
         std::unique_ptr<Bird> newBird;
-        switch (birdType) {
+        switch (birdType) { // Assigns the type of bird based on user input
             case 1:
                 newBird = std::make_unique<Passeriformes>(name, popularName, scientificName, age, wingspan, naturalHabitat, isMigratory, status);
                 break;
@@ -130,7 +130,7 @@ public:
                 break;
         }
         
-        birds.push_back(std::move(newBird));
+        birds.push_back(std::move(newBird)); // Adds the new bird to the vector of birds
         std::cout << "\nBird added successfully!\n";
     }
 
@@ -303,7 +303,7 @@ public:
         
         for (const auto& bird : birds) {
             if (bird->getendangeredStatus() == searchStatus) {
-                foundBirds.push_back(bird.get());
+                foundBirds.push_back(bird.get()); // adds bird pointer to the foundBirds vector
             }
         }
         

@@ -5,7 +5,7 @@
 #include <iostream>
 #include <iomanip>
 
-enum EndangeredStatus {
+enum EndangeredStatus { // levels of endangered status
     NOT_ENDANGERED, // 0
     VULNERABLE, // 1
     ENDANGERED, // 2
@@ -13,7 +13,7 @@ enum EndangeredStatus {
 };
 
 class Bird {
-private:
+private: // Bird attributes
     std::string name;
     std::string popularName;
     std::string scientificName;
@@ -25,8 +25,9 @@ private:
 
 public:
     Bird(const std::string& name, const std::string& popularName, const std::string& scientificName, 
-         int age, float wingspan, const std::string& naturalHabitat, bool isMigratory, EndangeredStatus endangeredStatus);
+         int age, float wingspan, const std::string& naturalHabitat, bool isMigratory, EndangeredStatus endangeredStatus); // constructor
 
+    // Getters
     std::string getName() const;
     std::string getPopularName() const;
     std::string getScientificName() const;
@@ -36,6 +37,7 @@ public:
     bool getIsMigratory() const;
     EndangeredStatus getendangeredStatus() const;
 
+    // Setters
     void setName(const std::string& newName);
     void setPopularName(const std::string& newPopularName);
     void setScientificName(const std::string& newScientificName);
@@ -45,9 +47,10 @@ public:
     void setIsMigratory(bool newIsMigratory);
     void setendangeredStatus(EndangeredStatus newendangeredStatus);
 
-    virtual std::string getBirdType() const;
+    // Virtual methods
+    virtual std::string getBirdType() const; // returns the type of bird which depends on the derived class
     virtual void displayInfo() const;
-    virtual ~Bird();
+    virtual ~Bird(); // virtual destructor
 };
 // Derived classes stored in separate files
 // Anseriformes
